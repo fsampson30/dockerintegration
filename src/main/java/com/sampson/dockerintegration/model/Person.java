@@ -1,19 +1,17 @@
 package com.sampson.dockerintegration.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "tb_persons")
 public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String nome;
+    private String name;
 
     public long getId() {
         return id;
@@ -23,12 +21,12 @@ public class Person {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -36,11 +34,11 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return id == person.id && Objects.equals(nome, person.nome);
+        return id == person.id && Objects.equals(name, person.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nome);
+        return Objects.hash(id, name);
     }
 }
