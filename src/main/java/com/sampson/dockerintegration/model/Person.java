@@ -13,6 +13,8 @@ public class Person {
 
     private String name;
 
+    private String age;
+
     public long getId() {
         return id;
     }
@@ -27,6 +29,14 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 
     @Override
