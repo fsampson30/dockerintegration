@@ -15,6 +15,8 @@ public class Person {
 
     private String age;
 
+    private char gender;
+
     public long getId() {
         return id;
     }
@@ -33,6 +35,14 @@ public class Person {
 
     public String getAge() {
         return age;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
     }
 
     public void setAge(String age) {
