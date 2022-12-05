@@ -22,8 +22,8 @@ public class PersonController {
         return personService.getAllPersons();
     }
 
-    @GetMapping
+   /* @GetMapping
     public Person getPersonById(@RequestParam long id){
         return personService.getPersonById(id);
-    }
+    }*/
 }

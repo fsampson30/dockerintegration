@@ -11,7 +11,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String name;
+    private String person_name;
 
     private String age;
 
@@ -25,12 +25,12 @@ public class Person {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getPerson_name() {
+        return person_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPerson_name(String person_name) {
+        this.person_name = person_name;
     }
 
     public String getAge() {
@@ -54,11 +54,11 @@ public class Person {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return id == person.id && Objects.equals(name, person.name);
+        return id == person.id && Objects.equals(person_name, person.person_name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name);
+        return Objects.hash(id, person_name);
     }
 }
